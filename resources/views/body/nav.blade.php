@@ -1,5 +1,5 @@
 
-
+<div>
 <ul class="nav nav-pills nav-fill gap-3 p-2 medium bg-dark rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-primary); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-warning);">
   <li class="nav-item" role="presentation">
     <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Özellikler</button>
@@ -12,7 +12,7 @@
   </li>
   <div class="logo-container">
     <a href="/" class="logo pull-right">
-        <img src="{{asset('assets/img/gider-paylasim.png')}}" height="38" style="margin-right:10px;" alt="GiderPaylasim Logo" />
+        <img src="{{asset('assets/images/gider-paylasim.png')}}" height="38" style="margin-right:10px;" alt="GiderPaylasim Logo" />
     </a>
     <!-- <li>
         <a style="justify-content:center; margin-right: 20px;" role="menuitem" href="/login"><i class="fa fa-person-booth"></i> Giriş</a>
@@ -30,5 +30,5 @@
             </ul>
     </div>
 </ul>
-
+</div>
 

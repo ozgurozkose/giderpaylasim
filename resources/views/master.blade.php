@@ -41,6 +41,9 @@
     <script src="{{asset('/assets/vendor/modernizr/modernizr.js')}}"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
 
+    <!-- My CSS -->
+    <link rel="stylesheet" href="{{asset('/assets/css/my.css')}}" />
+
 </head>
 <body>
 <section class="body">
