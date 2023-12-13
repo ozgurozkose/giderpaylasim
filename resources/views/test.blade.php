@@ -1,7 +1,7 @@
 @extends('master')
 @section('home_content')
 
-
+<h1>Başlık</h1>
 <div class="slider-inner">
     <div id="da-slider" class="da-slider" style="background-position: 0% 0%;">
         <div class="da-slide da-slide-toleft">
