@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SysAdminController;
 
 /*
@@ -26,3 +26,15 @@ Route::get('/login', function () {
 });
 
 Route::post('/login',[LoginController::class,'login'])->name('login');
+
+Route::prefix('user')->middleware('loginuser')->group(function (){
+    Route::get('anasayfa', [UserController::class, 'index'])->name('userindex');
+});
+
+Route::prefix('admin')->middleware('loginadmin')->group(function(){
+    Route::get('anasayfa', [AdminController::class, 'index'])->name('adminindex');
+});
+
+Route::prefix('sysadmin')->middleware('loginsysadmin')->group(function(){
+    Route::get('anasayfa', [SysAdminController::class, 'index'])->name('sysadminindex');
+});

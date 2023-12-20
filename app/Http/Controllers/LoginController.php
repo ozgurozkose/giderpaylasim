@@ -23,6 +23,41 @@ class LoginController extends Controller
         return view('users.userwelcome');
     } */
       public function login(Request $request){
-        return view('users.userwelcome');
+        $username = $request->username;
+        $password = $request->password;
+        $match = [
+          'username' => $username,
+          'password' => $password
+        ];
+
+        $user = DB::table('users')->where($match)->first();
+        if($user!=null){
+        if ($user->role_id == 1) {
+          session(['username' => $user->username]);
+          session(['role_id' => $user->role_id]);
+          session(['email' => $user->email]);
+          session(['CN' => $user->CN]);
+          return Redirect::route('sysadminindex');
+
+        }
+        elseif ($user->role_id == 2) {
+          session(['username' => $user->username]);
+          session(['role_id' => $user->role_id]);
+          session(['email' => $user->email]);
+          session(['CN' => $user->CN]);
+          return Redirect::route('adminindex');
+        }
+        else{
+          session(['username' => $user->username]);
+          session(['role_id' => $user->role_id]);
+          session(['email' => $user->email]);
+          session(['CN' => $user->CN]);
+          return Redirect::route('userindex');
+        }
+      }
+      else {
+        Alert::error('Kullanıcı Adı veya Şifreniz hatalıdır');
+        return back();
+      }
     }
 }
