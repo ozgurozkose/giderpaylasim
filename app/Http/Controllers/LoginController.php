@@ -18,10 +18,6 @@ use Illuminate\Support\Facades\Storage;
 
 class LoginController extends Controller
 {
-   /*  public function loginpost(Request $request){
-        dd("1");
-        return view('users.userwelcome');
-    } */
       public function login(Request $request){
         $username = $request->username;
         $password = $request->password;

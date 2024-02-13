@@ -1,0 +1,57 @@
+.adminContainer{
+    /* justify-content: center; */
+    border: 2px solid lightblue;
+    border-radius: 3px;
+    width:500px;
+    height:400px;
+    background-color: lightblue;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    
+   
+}
+.adminHeader {
+    margin-top: 80px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.labelHeader{
+  margin-left: 150px;;
+  width:100%;
+  justify-self: center;
+}
+.adminBody{
+  padding: 20px;
+  font-size: 20px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* width: 100%; */
+}
+
+
+.aBodyInput{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    font-weight: bold;
+  }
+
+  .aBodyButton {
+    margin-left: 130px;
+    width:100px;
+    background-color: cadetblue;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .aBodyButton:hover {
+    opacity: 0.8;
+  }
+
+ 

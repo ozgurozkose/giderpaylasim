@@ -25,6 +25,9 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/logout', function () {
+    return view('welcome');
+});
 Route::post('/login',[LoginController::class,'login'])->name('login');
 
 Route::prefix('user')->middleware('loginuser')->group(function (){
@@ -33,6 +36,11 @@ Route::prefix('user')->middleware('loginuser')->group(function (){
 
 Route::prefix('admin')->middleware('loginadmin')->group(function(){
     Route::get('anasayfa', [AdminController::class, 'index'])->name('adminindex');
+    // Route::get('readXML', [AdminController::class, 'readXML'])->name('readXML');
+    Route::post('readXML', [AdminController::class, 'readXML'])->name('readXML');
+    Route::post('readXLSX', [AdminController::class, 'readXLSX'])->name('readXLSX');
+
+
 });
 
 Route::prefix('sysadmin')->middleware('loginsysadmin')->group(function(){
